@@ -3,10 +3,42 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-</head>
-<body>
 <title>Rep Log</title>
 <meta name="claude:viewport-fit-sides" content="cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Rep Log">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#1f5fd1">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233476e8'/%3E%3Cstop offset='1' stop-color='%231646aa'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='180' height='180' rx='40' fill='url(%23g)'/%3E%3Cg fill='%23fff'%3E%3Crect x='20' y='82' width='140' height='16' rx='8'/%3E%3Crect x='48' y='46' width='20' height='88' rx='7'/%3E%3Crect x='112' y='46' width='20' height='88' rx='7'/%3E%3Crect x='30' y='60' width='16' height='60' rx='6'/%3E%3Crect x='134' y='60' width='16' height='60' rx='6'/%3E%3C/g%3E%3C/svg%3E">
+<script>
+/* Home-screen icon: iPhone/iPad need a PNG, so draw one on a canvas and point apple-touch-icon at it. */
+(function () {
+  try {
+    var S = 180, c = document.createElement("canvas");
+    c.width = S; c.height = S;
+    var x = c.getContext("2d");
+    var g = x.createLinearGradient(0, 0, S, S);
+    g.addColorStop(0, "#3476e8"); g.addColorStop(1, "#1646aa");
+    x.fillStyle = g; x.fillRect(0, 0, S, S);
+    function rr(X, Y, W, H, R) {
+      x.beginPath();
+      x.moveTo(X + R, Y); x.arcTo(X + W, Y, X + W, Y + H, R); x.arcTo(X + W, Y + H, X, Y + H, R);
+      x.arcTo(X, Y + H, X, Y, R); x.arcTo(X, Y, X + W, Y, R); x.closePath(); x.fill();
+    }
+    x.fillStyle = "rgba(8,28,80,0.25)"; rr(30, 52, 120, 82, 12);
+    x.fillStyle = "#ffffff";
+    rr(24, 78, 132, 14, 7);
+    rr(50, 44, 18, 82, 7); rr(112, 44, 18, 82, 7);
+    rr(34, 58, 14, 54, 6); rr(132, 58, 14, 54, 6);
+    x.fillStyle = "#f7aa50";
+    rr(64, 140, 14, 9, 4.5); rr(83, 140, 14, 9, 4.5); rr(102, 140, 14, 9, 4.5);
+    var l = document.createElement("link");
+    l.rel = "apple-touch-icon"; l.sizes = "180x180"; l.href = c.toDataURL("image/png");
+    document.head.appendChild(l);
+  } catch (e) {}
+})();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
 <style>
